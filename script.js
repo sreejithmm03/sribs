@@ -1,1 +1,1 @@
-console.log("Performance Report Loaded Successfully");
+console.log("Professional Activities Report Loaded");
