@@ -14,47 +14,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 
 <body>
+<!-- Hamburger -->
 
-<nav id="navbar">
-
-<div class="nav-container">
-
-<div class="nav-title">
-Performance Report
+<div class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
 </div>
 
-<ul>
+<!-- Sidebar -->
 
-<li><a href="#">Home</a></li>
+<nav id="sidebar">
 
-<li><a href="#dashboard">Dashboard</a></li>
 
-<li><a href="#summary">Summary</a></li>
 
-<li><a href="#research-highlights">Research</a></li>
+<div class="close-btn" id="closeBtn">
+    <i class="fas fa-times"></i>
+</div>
 
-<li><a href="#academic-activities">Academic Activities</a></li>
+<ul class="menu">
 
-<li><a href="#activities">Activities</a></li>
+    <li><a href="#hero">Home</a></li>
 
-<li><a href="#awards">Awards</a></li>
+    <li><a href="#overview">Overview</a></li>
+
+    <li><a href="#research-highlights">Research</a></li>
+
+    <li><a href="#academic-activities">Academic Activities</a></li>
+
+    <li><a href="#institutional-contributions">Institutional Contributions</a></li>
+
+    <li><a href="#awards">Awards & Recognition</a></li>
+
+    <li><a href="#growth">Professional Growth</a></li>
+
 
 </ul>
 
-</div>
-
 </nav>
 
-<section class="hero">
+<div id="overlay"></div>
+
+<section class="hero" id="hero">
+
 
 <div class="hero-content">
-
-<img src="images/logo.png" class="logo">
-
+<img src="images/logo.png" class="hero-logo" alt="SRIBS Logo">
 <h1>
 Professional Activities<br>
 & Research Report
@@ -82,24 +101,15 @@ Reporting Period
 
 <span>01 August 2024 – 14 July 2026</span>
 
-</div>
-
-<a href="#dashboard" class="button">
-
-Explore Report ↓
-
-</a>
-
-</div>
+<div class="divider small"></div>
 
 </section>
 
-
-<section id="dashboard">
+<section id="overview">
 
 <div class="container">
 
-<h2>Performance at a Glance</h2>
+<h2>Overview</h2>
 
 <div class="cards">
 
@@ -145,16 +155,15 @@ Explore Report ↓
 
 </section>
 
-
-<section id="summary">
+<section id="executive-summary">
 
 <div class="container">
 
-<h2>Executive Summary</h2>
+<h2>Summary</h2>
 
 <p>
 
-During the reporting period (August 2024 – July 2026), I actively contributed to the academic, research and institutional development of KSCSTE–Srinivasa Ramanujan Institute for Basic Sciences through original research, conference presentations, invited lectures, outreach programmes, organisation of academic events, institutional documentation and digital initiatives.
+During my stint at SRIBS (August 2024 – July 2026), I actively contributed to the academic, research and institutional development of the institute through original research, conference presentations, invited lectures, outreach programmes, organisation of academic events, institutional documentation and digital initiatives.
 
 This report presents a concise overview of the research achievements, academic activities and institutional responsibilities undertaken during my tenure as a Postdoctoral Fellow.
 
@@ -171,7 +180,7 @@ This report presents a concise overview of the research achievements, academic a
 <h2>Research Highlights</h2>
 
 <p class="section-intro">
-My research during the reporting period has focused primarily on
+My research at SRIBS has focused primarily on
 <strong>Modular Forms</strong>,
 <strong>Siegel Modular Forms</strong>,
 <strong>Jacobi Forms</strong>,
@@ -185,15 +194,22 @@ and related areas in analytic and algebraic number theory.
 
 <div class="research-card">
 
-<h3>Algebraicity of Certain Partial Sums involving Hecke Eigenvalues of Siegel Cusp Forms of Degree Two</h3>
+<h3>
+    <a href="https://drive.google.com/file/d/1SkVjR4RNfl144B34BxWWA0MfQFun6WSX/view?usp=drive_link"
+       target="_blank"
+       class="paper-link">
+       Integrality of Certain Partial Sums involving Hecke Eigenvalues of Siegel Cusp Forms of Degree Two
+       <i class="fas fa-external-link-alt"></i>
+    </a>
+</h3>
 
 <div class="badges">
 <span class="status submitted">Submitted</span>
-<span class="area">Siegel Modular Forms</span>
+<span class="area">Siegel modular forms</span>
 </div>
 
 <p class="contribution">
-Generalizes the algebraicity results of Kohnen–Luca from elliptic modular forms to Siegel modular forms of genus two by studying partial sums of normalized Hecke eigenvalues.
+Generalizes the algebraicity results of Kohnen–Luca from elliptic modular forms to Siegel modular forms of genus two.
 </p>
 
 <button class="abstract-btn">
@@ -203,7 +219,9 @@ Generalizes the algebraicity results of Kohnen–Luca from elliptic modular form
 <div class="abstract">
 
 <p>
-In this work, we prove the algebraicity of certain partial sums involving the normalized Hecke eigenvalues of Siegel cusp forms of degree two. We establish that, beyond a finite range, these partial sums cannot all remain algebraic, thereby extending earlier results from the elliptic setting to genus two.
+ In this article, we prove the non-integrality of certain partial sums related with the Hecke eigenvalues of a Siegel eigen cusp form of degree two and weight $k$ for the group $\text{Sp}_4(\mathbb{Z})$. For such an eigenform $F$ (not lying in the Maass subspace) with eigenvalues $\lambda_F(n)$, we prove that when $j>\ell(k-3/2)$ there exists an integer $N$ such that the partial sums
+    \[ I_{F,n,\ell,j} := \sum_{m=1}^{n} \frac{\lambda_F(m)^{\ell}}{m^{j}} \]
+are not algebraic integers for all $n\geq N$. This generalizes a result of Kohnen-Luca in the case of elliptic modular forms to the case of Siegel modular forms of genus two.
 </p>
 
 </div>
@@ -213,11 +231,20 @@ In this work, we prove the algebraicity of certain partial sums involving the no
 
 <div class="research-card">
 
-<h3>A Certain Self-Adjoint Operator on Jacobi Forms and Characterisations of Maass Space</h3>
+<h3>
+    <a href="https://drive.google.com/file/d/1wz-iJZZ2KSse46XCmoZ35hNED5wc8_vu/view?usp=drive_link"
+       target="_blank"
+       class="paper-link">
+       A Certain Self-Adjoint Operator on Jacobi Forms and Characterisations of Maass Space
+       <i class="fas fa-external-link-alt"></i>
+    </a>
+</h3>
+
+
 
 <div class="badges">
 <span class="status submitted">Submitted</span>
-<span class="area">Jacobi Forms</span>
+<span class="area">Jacobi forms</span>
 </div>
 
 <p class="contribution">
@@ -231,9 +258,7 @@ Introduces a self-adjoint operator on Jacobi forms and derives new characterisat
 <div class="abstract">
 
 <p>
-
-This work establishes an inner-product relation connecting Siegel newforms and Jacobi newforms. Using this relation, a natural self-adjoint operator on Jacobi forms is obtained, leading to new characterisations of Siegel newforms lying in the Maass space.
-
+In this paper we show the existence of a self-adjoint operator on Jacobi forms by deriving an inner product relation that connects  a Siegel newform $F$ in the Maass space of cusp forms of degree 2, weight $k$, level $M$ ($32|M$), character $\chi$ ($\chi$ and $\chi^2$ are primitive characters  modulo $M$ and $M/2$ respectively) and the corresponding Jacobi newform $\phi$ in the space of Jacobi cusp forms of weight $k$, index $1$, level $M$ and character $\chi$.    We also  derive two characterisations pertaining to  a degree two Siegel newform belongs to Maass space.
 </p>
 
 </div>
@@ -258,11 +283,11 @@ Manuscripts Under Preparation
 <div class="badges">
 
 <span class="status preparation">
-Under Preparation
+Under preparation
 </span>
 
 <span class="area">
-Siegel Modular Forms
+Siegel modular forms
 </span>
 
 </div>
@@ -282,9 +307,7 @@ Studies multiplicity-one phenomena by investigating ratios of Hecke eigenvalues 
 <div class="abstract">
 
 <p>
-
-This work generalizes a theorem of Choi–Lim from elliptic modular forms to genus two Siegel modular forms by proving that finiteness of eigenvalue ratios forces proportionality of the underlying eigenforms.
-
+Let $F$ and $G$ be two non zero Siegel eigen cusp forms of genus two, with their weights not necessarily be equal. Consider the set $R(F,G)= \{ x \in \mathbb{P}^1(\bbc) : x = [\lambda_F(p):\lambda_G(p)] \text{ for some prime } p \}$, where $\lambda_F(p)$ and $\lambda_G(p)$ are the eigenvalues of $F$ and $G$, respectively. We prove that, if the forms $F$ and $G$ are not lying in the Maass subspace and $R(F,G)$ is finite, then $F=cG$ for some constant $c$. This generalises the work of Choi-Lim to the case of Siegel modular forms of genus two.
 </p>
 
 </div>
@@ -301,13 +324,13 @@ This work generalizes a theorem of Choi–Lim from elliptic modular forms to gen
 
 <span class="status preparation">
 
-Under Preparation
+Under preparation
 
 </span>
 
 <span class="area">
 
-Half-Integral Weight
+Half-integral weight forms
 
 </span>
 
@@ -315,7 +338,7 @@ Half-Integral Weight
 
 <p class="contribution">
 
-Develops a newform theory for half-integral weight cusp forms of level 8N using trace relations and Shimura–Shintani correspondences.
+Develops a newform theory for half-integral weight cusp forms of level 8N using Shimura–Shintani correspondences.
 
 </p>
 
@@ -328,9 +351,8 @@ Develops a newform theory for half-integral weight cusp forms of level 8N using 
 <div class="abstract">
 
 <p>
-
-The project develops structural results on newforms of half-integral weight, establishes plus-space properties, and investigates the Eichler–Zagier correspondence in the setting of higher levels.
-
+Let $k\geq2$ and $N$ be an odd and square free integer. Main aim of the paper is to construct explicit Shintani maps indexed by odd fundamental discriminants $D,((-1)^k D>0)$ on the space of cusp forms  of weight $2k$, level $4N$ with trivial character. Using this and the trace relation derived by S. Niwa (which gives isomorphism between the space of cusp forms of weight $2k$, level $4N$ and the space of cusp forms of weight $k+1/2$, level $8N$) we prove that the subspace of newforms of weight $k+1/2$ for $\Gamma_{0}(8N)$ with trivial character  satisfies the plus space condition: the $n$-th Fourier coefficient $a_f(n)=0$ whenever $(-1)^{k}n\equiv2,3\Mod{4}$.  
+Finally, we observe that the respective plus subspaces in $S_{k+1/2}\left(8N,\bfrac{8}{\cdot}\right)$ and $S_{k+1/2}\left(16N,\bfrac{8}{\cdot}\right)$ are trivial.
 </p>
 
 </div>
@@ -350,45 +372,139 @@ The project develops structural results on newforms of half-integral weight, est
 <h2>Academic Activities</h2>
 
 <p class="section-intro">
-Academic engagement during the reporting period included invited lectures,
+Academic engagement during the period included invited lectures,
 conference presentations, serving as a resource person, and participation in
 national and international workshops and conferences.
 </p>
 
+
 <h3 class="subheading">🎤 Invited Talks</h3>
 
-<div class="activity-grid">
-    <h3>The Architecture of Math: From Theory to Prime Discovery</h3>
+<div class="timeline">
 
-<p><strong>Date:</strong> 01 August 2025</p>
+<div class="timeline-item">
+<div class="timeline-date">22 Jan 2026</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Bias and Fluctuations in Primes <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Berchman's Lecture Series in Mathematics</strong></p>
+<p>SB College, Changanassery, Kottayam</p>
+</div>
+</div>
 
-<p><strong>Venue:</strong> St. Joseph's College, Irinjalakkuda</p>
+<div class="timeline-item">
+<div class="timeline-date">22 Dec 2025</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+From Ramanujan to Black Holes <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>National Mathematics Day Celebrations</strong></p>
+<p>SRIBS & BCM College, Kottayam</p>
+</div>
+</div>
 
-<span class="activity-type">Invited Talk</span>
+<div class="timeline-item">
+<div class="timeline-date">16 Oct 2025</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Chaos, Order and the Prime Numbers <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Invited Talk</strong></p>
+<p>Al-Ameen College, Edathala</p>
+</div>
+</div>
 
-<a href="#" class="event-link">
-Read Event Report →
-</a>
+<div class="timeline-item">
+<div class="timeline-date">01 Aug 2025</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+The Architecture of Math: From Theory to Prime Discovery <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Jointly organized by SRIBS & St. Joseph's College</strong></p>
+<p>Irinjalakkuda, Thrissur</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">19 Mar 2025</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Mathematics Beyond Formulas and Exams <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Interactive Session</strong></p>
+<p>Baselius College, Kottayam</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">21 Feb 2025</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Beyond Theorems: Bridging Theory and Research in Mathematics <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Interactive Session with PG Students</strong></p>
+<p>TKM College of Arts & Science, Kollam</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">04 Jan 2025</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Independence between Eigenvalues of Siegel Modular Forms of Degree Two <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>TRADE Conference</strong></p>
+<p>Kerala School of Mathematics, Kozhikode</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">09 Dec 2024</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Independence between Eigenvalues of Siegel Modular Forms of Degree Two <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Celebrating Number Theory in India</strong></p>
+<p>IISER Pune</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">19 Nov 2024</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Beyond Maths <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Career Guidance Session</strong></p>
+<p>Nehru Arts & Science College, Kanhangad</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">05 Nov 2024</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+Introduction to Elliptic Curve Cryptography <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Webinar</strong></p>
+<p>SRIBS & Sree Sankara College, Kalady</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">10 Sep 2024</div>
+<div class="timeline-content">
+<h3><a href="YOUR_SRIBS_LINK_HERE" target="_blank" class="event-title">
+The Prime Number Race <i class="fas fa-external-link-alt"></i>
+</a></h3>
+<p><strong>Student Enrichment Program</strong></p>
+<p>Al-Ameen College, Edathala</p>
+</div>
+</div>
 
 </div>
 
-<div class="activity-card">
-
-<h3>Mathematics Beyond Formulas and Exams</h3>
-
-<p><strong>Date:</strong>19 March 2025</p>
-
-<p><strong>Venue:</strong>Baselius College, Kottayam</p>
-
-<span class="activity-type">
-Invited Talk
-</span>
-
-<a href="#" class="event-link">
-Read Event Report →
-</a>
-
-</div>
 
 <h3 class="subheading">📑 Conference Presentations</h3>
 
@@ -447,7 +563,7 @@ Read Event Report →
 <div class="activity-grid">
     <h3> Circle Method and Related Topics, ICTS </h3>
 </div>
-
+</div>
 </section>
 
 <section id="institutional-contributions">
@@ -658,75 +774,6 @@ These diverse responsibilities have broadened my perspective as a researcher and
 
 </section>
 
-<section id="summary">
-
-<div class="container">
-
-<h2>Contribution at a Glance</h2>
-
-<p class="section-intro">
-A summary of academic and institutional contributions during the reporting period.
-</p>
-
-<div class="stats-grid">
-
-<div class="stat-card">
-<h1>4</h1>
-<p>Research Projects</p>
-</div>
-
-<div class="stat-card">
-<h1>8</h1>
-<p>Invited Talks</p>
-</div>
-
-<div class="stat-card">
-<h1>2</h1>
-<p>Conference Presentations</p>
-</div>
-
-<div class="stat-card">
-<h1>3</h1>
-<p>Resource Person Activities</p>
-</div>
-
-<div class="stat-card">
-<h1>4</h1>
-<p>Students Mentored</p>
-</div>
-
-<div class="stat-card">
-<h1>2</h1>
-<p>Academic Programmes Coordinated</p>
-</div>
-
-<div class="stat-card">
-<h1>1</h1>
-<p>Annual Report Prepared</p>
-</div>
-
-<div class="stat-card">
-<h1>4</h1>
-<p>Quarterly Newsletters</p>
-</div>
-
-<div class="stat-card">
-<h1>2</h1>
-<p>Research Papers Submitted</p>
-</div>
-
-<div class="stat-card">
-<h1>2</h1>
-<p>Research Papers Under Preparation</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="activities"></section>
 
 <script src="script.js"></script>
 
