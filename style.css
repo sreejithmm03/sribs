@@ -947,17 +947,21 @@ margin-bottom:15px;
 
 display:inline-block;
 
-margin-top:18px;
+margin-bottom:18px;
 
-padding:8px 18px;
+padding:6px 16px;
 
-background:#0B3D91;
+background:#D4AF37;
 
 color:white;
 
+font-size:.9rem;
+
+font-weight:700;
+
 border-radius:30px;
 
-font-weight:600;
+letter-spacing:.5px;
 
 }
 
@@ -1371,5 +1375,97 @@ opacity:.7;
 margin:6px 0;
 
 line-height:1.6;
+
+}
+
+/*=====================================
+Institutional Contributions Theme
+======================================*/
+
+.gold-theme{
+
+background:#FFFDF8;
+
+}
+
+.gold-theme h2{
+
+color:#8A5A00;
+
+}
+
+.gold-theme h2::after{
+
+background:#B8860B;
+
+}
+
+.gold-theme .subheading{
+
+color:#8A5A00;
+
+border-left:5px solid #B8860B;
+
+padding-left:12px;
+
+margin-top:45px;
+
+margin-bottom:25px;
+
+}
+
+.gold-theme .research-card,
+.gold-theme .activity-card,
+.gold-theme .timeline-content{
+
+border-left:5px solid #B8860B;
+
+}
+
+.gold-theme .abstract-btn{
+
+background:#B8860B;
+
+color:white;
+
+}
+
+.gold-theme .abstract-btn:hover{
+
+background:#8A5A00;
+
+}
+
+.gold-theme .activity-type{
+
+background:#F4E7C1;
+
+color:#7A5200;
+
+}
+
+.gold-theme .event-title{
+
+color:#8A5A00;
+
+}
+
+.gold-theme .event-title:hover{
+
+color:#B8860B;
+
+}
+
+.gold-theme .timeline::before{
+
+background:#B8860B;
+
+}
+
+.gold-theme .timeline-item::before{
+
+background:#B8860B;
+
+box-shadow:0 0 0 3px rgba(184,134,11,.18);
 
 }
